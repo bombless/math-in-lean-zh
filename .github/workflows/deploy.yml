@@ -21,7 +21,9 @@ jobs:
 
       - name: Build Sphinx PDF
         run: |
+          chmod +x scripts/clean.py
           python scripts/clean.py
+          chmod +x scripts/mkall.py
           python scripts/mkall.py
           make latexpdf  # 使用 Makefile
           # 或者直接调用 sphinx-build
