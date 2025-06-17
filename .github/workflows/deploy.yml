@@ -29,7 +29,7 @@ jobs:
           # cd docs/build/latex && latexmk -xelatex
 
       - name: Upload PDF artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pdf-output
           path: build/latex/*.pdf  # 根据实际路径调整
